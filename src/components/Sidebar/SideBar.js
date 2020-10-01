@@ -8,10 +8,10 @@ const SideBar = (props) => {
       <div className="jumbotron py-3 bg-secondary">
         <div className="row">
           <div className="col-md-12">
-            <SideBarTitle initialContent={props.initialContent}/>
+            <SideBarTitle sideMenuCaption={props.initialContent.sideMenuCaption}/>
           </div>
           <div className="col-md-12">
-            <SideBarMenu initialContent={props.initialContent}/>
+            <SideBarMenu navigationMenu={props.initialContent.navigationMenu}/>
           </div>
         </div>
       </div>

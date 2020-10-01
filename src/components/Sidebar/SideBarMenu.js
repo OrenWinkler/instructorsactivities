@@ -1,15 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const SideBarMenu = () => {
-    return (
-        <div className="container my-5">
-          <div className="jumbotron py-3 .bg-dark">
-              <div className = "row">
-              <div className ="col-md-12">SideBarMenu component</div>
-              </div>
+const SideBarMenu = (props) => {
+  return (
+    <div className="container my-5">
+      <div className="jumbotron py-3 .bg-dark">
+        <div className="row">
+          <div className="col-md-12">
+            {props.navigationMenu.map((menuItem) => (
+              <li>{menuItem.text}</li>
+            ))}
           </div>
         </div>
-      )
-}
+      </div>
+    </div>
+  );
+};
 
-export default SideBarMenu
+export default SideBarMenu;
