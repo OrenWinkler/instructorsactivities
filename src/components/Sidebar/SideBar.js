@@ -2,16 +2,16 @@ import React from "react";
 import SideBarMenu from "./SideBarMenu";
 import SideBarTitle from "./SideBarTitle";
 
-const SideBar = () => {
+const SideBar = (props) => {
   return (
     <div className="container my-5">
       <div className="jumbotron py-3 bg-secondary">
         <div className="row">
           <div className="col-md-12">
-            <SideBarTitle />
+            <SideBarTitle initialContent={props.initialContent}/>
           </div>
           <div className="col-md-12">
-            <SideBarMenu />
+            <SideBarMenu initialContent={props.initialContent}/>
           </div>
         </div>
       </div>
